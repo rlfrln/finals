@@ -1,0 +1,191 @@
+/* ==========================================================================
+   GLOBAL STYLES
+   ========================================================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+h1, h2, h3, h5 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* Fix global image rule from breaking Bootstrap card layout top-corners */
+img:not(.card-img-top) {
+    border-radius: 8px;
+}
+
+.rounded {
+    border-radius: 10px !important;
+}
+
+/* ==========================================================================
+   NAVBAR STYLES
+   ========================================================================== */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000000 !important;
+}
+
+.nav-link.active {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    height: 90vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ),
+    url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 70px;
+    letter-spacing: 4px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.hero .btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+}
+
+/* ==========================================================================
+   PRODUCT CARDS
+   ========================================================================== */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Clean transition animation that doesn't stutter */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card .card-img-top {
+    height: 320px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-body p {
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   BUTTONS & CONTACT FORM
+   ========================================================================== */
+.btn-dark {
+    padding: 10px 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #444444 !important;
+    border-color: #444444 !important;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Removed CSS transform scales here because your custom js handles it smoothly */
+.btn-primary,
+.btn-danger {
+    transition: background-color 0.3s ease;
+}
+
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+footer {
+    background: #111111;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-top: 10px; /* Separates the links cleanly on mobile dropdowns */
+        text-align: center;
+    }
+
+    .card .card-img-top {
+        height: 250px;
+    }
+}
